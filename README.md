@@ -1,4 +1,4 @@
-# Minimalistic Latex Resume Template
+# Minimalist Latex Resume Template
 
 # Setup Process
 
