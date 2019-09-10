@@ -1,0 +1,131 @@
+\documentclass{article}
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage[margin=0.7in]{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+
+\newcommand{\MyName}[1]{ % Name
+		\noindent \Huge \usefont{OT1}{cmr}{b}{n} #1 \hfill 
+		\par \normalsize \normalfont}
+
+\newcommand{\MyLocation}[1]{ % Name
+		\noindent \usefont{OT1}{cmr}{b}{n} #1 \hfill 
+		\par \normalsize \normalfont}
+
+\newcommand{\MyContact}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{cmr}{m}{n} #1
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{{\color{gray}\uppercase{#1}}}}
+
+\newcommand{\SkillsEntry}[2]{\textbf{#1}: #2}  
+		
+\newcommand{\ExperienceEntry}[4]{
+		\noindent \textbf{#1} \hfill  
+		\hfill #2 \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\begin{document}
+
+\begin{multicols}{2}
+\MyName{FirstName LastName}
+\MyLocation{City, Country}
+\columnbreak
+\MyContact{\faEnvelope : your@email.com}
+\MyContact{\faGithub : \href{https://www.github.com/}{github.com/}}
+\MyContact{\faLinkedin : \href{https://www.linkedin.com/in/}{linkedin.com/in/}}
+\end{multicols}
+
+\NewPart{Qualifications}{}
+
+
+\begin{itemize}
+  \item[]{\SkillsEntry{Skill Set 1}{...}}
+  \item[]{\SkillsEntry{Skill Set 2}{...}}
+  \item[]{\SkillsEntry{Skill Set 3}{...}}
+\end{itemize}
+
+
+\NewPart{Work experience}{}
+
+\ExperienceEntry
+{Position 1}
+{Jan 2019-Jan 2019}
+{CompanyName 1 $\vert$ City, Country}
+{	
+\begin{itemize}
+	\item{Responsibilities}
+	\item{Responsibilities}
+	\item{Responsibilities}
+\end{itemize}
+}
+
+\ExperienceEntry
+{Position 2}
+{Jan 2019-Jan 2019}
+{CompanyName 2 $\vert$ City, Country}
+{	
+\begin{itemize}
+	\item{Responsibilities}
+	\item{Responsibilities}
+	\item{Responsibilities}
+\end{itemize}
+}
+
+\ExperienceEntry
+{Position 3}
+{Jan 2019-Jan 2019}
+{CompanyName 3 $\vert$ City, Country}
+{	
+\begin{itemize}
+	\item{Responsibilities}
+	\item{Responsibilities}
+	\item{Responsibilities}
+\end{itemize}
+}
+
+
+\NewPart{Education}{}
+
+\ExperienceEntry
+{DegreeName}
+{2019 - 2019}
+{\href{https://university.website}
+{University Name} $\vert$ City, Country}
+{}
+
+\ExperienceEntry
+{DegreeName}
+{2019 - 2019}
+{\href{https://university.website}
+{University Name} $\vert$ City, Country}
+{}
+
+
+\end{document}
+
+
