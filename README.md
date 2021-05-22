@@ -1,5 +1,7 @@
 # Minimalist Latex Resume Template
 
+![image](https://user-images.githubusercontent.com/17241029/119233630-009ee080-baf8-11eb-9214-175bc8019b61.png)
+
 # Setup Process
 
 ### Install Latex
